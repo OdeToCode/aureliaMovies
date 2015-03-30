@@ -12,6 +12,7 @@ System.config({
   "map": {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.10.0",
     "aurelia-framework": "github:aurelia/framework@0.9.0",
+    "bootstrap": "github:twbs/bootstrap@3.3.4",
     "github:aurelia/binding@0.4.0": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.1",
       "aurelia-metadata": "github:aurelia/metadata@0.3.4",
