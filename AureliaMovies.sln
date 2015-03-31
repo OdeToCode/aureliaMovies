@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22609.0
+VisualStudioVersion = 14.0.22728.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2F8BE05-1AE1-4F9A-83F8-193923D95C91}"
 EndProject
@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AureliaMovies", "src\AureliaMovies\AureliaMovies.kproj", "{210E8E57-106B-4650-9DAF-649C770176F1}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AureliaMovies", "src\AureliaMovies\AureliaMovies.xproj", "{210E8E57-106B-4650-9DAF-649C770176F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,11 @@
 System.config({
   "baseURL": "/",
   "transpiler": "babel",
+  "babelOptions": {
+    "optional": [
+      "runtime"
+    ]
+  },
   "paths": {
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
@@ -12,6 +17,8 @@ System.config({
   "map": {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.10.0",
     "aurelia-framework": "github:aurelia/framework@0.9.0",
+    "babel": "npm:babel@4.7.16",
+    "babel-runtime": "npm:babel-runtime@4.7.16",
     "bootstrap": "github:twbs/bootstrap@3.3.4",
     "github:aurelia/binding@0.4.0": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.1",
@@ -100,6 +107,9 @@ System.config({
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
+    },
+    "npm:babel-runtime@4.7.16": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:core-js@0.4.10": {
       "process": "github:jspm/nodelibs-process@0.1.1"
