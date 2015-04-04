@@ -5,7 +5,8 @@
     "": [
       "Microsoft.AspNet.Loader.IIS >= 1.0.0-beta4-11316",
       "Microsoft.AspNet.Loader.IIS.Interop >= 1.0.0-beta4-11316",
-      "Microsoft.AspNet.Mvc >= 6.0.0-beta4-13141"
+      "Microsoft.AspNet.Mvc >= 6.0.0-beta4-13141",
+      "Microsoft.AspNet.StaticFiles >= 1.0.0-beta4-11540"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
@@ -1398,6 +1399,59 @@
         "lib/dnx451/Microsoft.AspNet.Routing.xml",
         "lib/dnxcore50/Microsoft.AspNet.Routing.dll",
         "lib/dnxcore50/Microsoft.AspNet.Routing.xml"
+      ]
+    },
+    "Microsoft.AspNet.StaticFiles/1.0.0-beta4-11540": {
+      "sha": "sfK9mLr/jEuadOooo+dpke+KgHhWKLeGDajMjsYGZVG2b+KYGGXHRPCtb0XvZkQ+brsjTvDnRJy8rV1mCKJ2PA==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Microsoft.AspNet.Http.Extensions": "1.0.0-beta4-11138",
+            "Microsoft.AspNet.Http.Interfaces": "1.0.0-beta4-11138",
+            "Microsoft.AspNet.FileProviders.Interfaces": "1.0.0-beta4-11035",
+            "Microsoft.AspNet.Hosting.Interfaces": "1.0.0-beta4-11365",
+            "Microsoft.Framework.Logging": "1.0.0-beta4-11028",
+            "Microsoft.Framework.WebEncoders": "1.0.0-beta4-11138"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.StaticFiles.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.AspNet.StaticFiles.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Microsoft.AspNet.Http.Extensions": "1.0.0-beta4-11138",
+            "Microsoft.AspNet.Http.Interfaces": "1.0.0-beta4-11138",
+            "Microsoft.AspNet.FileProviders.Interfaces": "1.0.0-beta4-11035",
+            "Microsoft.AspNet.Hosting.Interfaces": "1.0.0-beta4-11365",
+            "Microsoft.Framework.Logging": "1.0.0-beta4-11028",
+            "Microsoft.Framework.WebEncoders": "1.0.0-beta4-11138"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Microsoft.AspNet.StaticFiles.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Microsoft.AspNet.StaticFiles.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.AspNet.StaticFiles.1.0.0-beta4-11540.nupkg",
+        "Microsoft.AspNet.StaticFiles.1.0.0-beta4-11540.nupkg.sha512",
+        "Microsoft.AspNet.StaticFiles.nuspec",
+        "lib/dnx451/Microsoft.AspNet.StaticFiles.dll",
+        "lib/dnx451/Microsoft.AspNet.StaticFiles.xml",
+        "lib/dnxcore50/Microsoft.AspNet.StaticFiles.dll",
+        "lib/dnxcore50/Microsoft.AspNet.StaticFiles.xml"
       ]
     },
     "Microsoft.AspNet.WebUtilities/1.0.0-beta4-11138": {
