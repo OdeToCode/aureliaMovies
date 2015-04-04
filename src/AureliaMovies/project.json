@@ -2,8 +2,9 @@
     "webroot": "wwwroot",
     "version": "1.0.0-*",
     "dependencies": {
-        "Microsoft.AspNet.Loader.IIS": "1.0.0-beta4",
-        "Microsoft.AspNet.Loader.IIS.Interop": "1.0.0-beta4"
+        "Microsoft.AspNet.Loader.IIS": "1.0.0-beta4-11316",
+        "Microsoft.AspNet.Loader.IIS.Interop": "1.0.0-beta4-11316",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta4-13141"
     },
     "frameworks": {
         "dnx451": { },
