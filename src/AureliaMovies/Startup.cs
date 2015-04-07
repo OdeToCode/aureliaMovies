@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Http;
+﻿using Microsoft.AspNet.Builder;
 using Microsoft.Framework.DependencyInjection;
 
 namespace AureliaMovies
