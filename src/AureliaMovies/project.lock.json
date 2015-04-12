@@ -6,12 +6,393 @@
       "Microsoft.AspNet.Loader.IIS >= 1.0.0-beta4-11316",
       "Microsoft.AspNet.Loader.IIS.Interop >= 1.0.0-beta4-11316",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta4-13141",
-      "Microsoft.AspNet.StaticFiles >= 1.0.0-beta4-11540"
+      "Microsoft.AspNet.StaticFiles >= 1.0.0-beta4-11540",
+      "EntityFramework.SqlServer >= 7.0.0-beta4-12599",
+      "EntityFramework.Commands >= 7.0.0-beta4-12599",
+      "Microsoft.Framework.ConfigurationModel.Json >= 1.0.0-beta4-11001"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
   },
   "libraries": {
+    "EntityFramework.Commands/7.0.0-beta4-12599": {
+      "sha": "9B/acfPq/24T1uJDlFyT/R3uxyF3vcJ5mhTJ9bz5TtFzSgI63cqkmYfE1LTmI9p1c6yH89hmNiNAxy7gfit72g==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "EntityFramework.Relational": "7.0.0-beta4-12599",
+            "EntityFramework.Relational.Design": "7.0.0-beta4-12599",
+            "EntityFramework.SqlServer.Design": "7.0.0-beta4-12599",
+            "Microsoft.CodeAnalysis.CSharp": "1.0.0-rc2-20150316-05",
+            "Microsoft.Framework.DependencyInjection": "1.0.0-beta4-11037",
+            "Microsoft.AspNet.Hosting": "1.0.0-beta4-11365"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/EntityFramework.Commands.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/EntityFramework.Commands.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "EntityFramework.Relational": "7.0.0-beta4-12599",
+            "EntityFramework.Relational.Design": "7.0.0-beta4-12599",
+            "EntityFramework.SqlServer.Design": "7.0.0-beta4-12599",
+            "Microsoft.CodeAnalysis.CSharp": "1.0.0-rc2-20150316-05",
+            "Microsoft.Framework.DependencyInjection": "1.0.0-beta4-11037",
+            "Microsoft.AspNet.Hosting": "1.0.0-beta4-11365"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/EntityFramework.Commands.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/EntityFramework.Commands.dll"
+          ]
+        }
+      },
+      "files": [
+        "EntityFramework.Commands.7.0.0-beta4-12599.nupkg",
+        "EntityFramework.Commands.7.0.0-beta4-12599.nupkg.sha512",
+        "EntityFramework.Commands.nuspec",
+        "app/ef.cmd",
+        "app/ef.sh",
+        "app/project.json",
+        "lib/dnx451/EntityFramework.Commands.dll",
+        "lib/dnx451/EntityFramework.Commands.xml",
+        "lib/dnxcore50/EntityFramework.Commands.dll",
+        "lib/dnxcore50/EntityFramework.Commands.xml",
+        "lib/net451/EntityFramework.Commands.dll",
+        "lib/net451/EntityFramework.Commands.xml",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/Handlers.cs",
+        "tools/IHandlers.cs",
+        "tools/init.ps1"
+      ]
+    },
+    "EntityFramework.Core/7.0.0-beta4-12599": {
+      "sha": "D4Cd5GaX0vv225zKuKcz42I7nExinx5ixGXqvR76s0+Ko5IDhN8OkqpGQoDjrjDYdm1LZG9cbSn5yt4M8ZZiRw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Ix-Async": "1.2.3",
+            "Microsoft.Framework.Caching.Memory": "1.0.0-beta4-11012",
+            "Microsoft.Framework.DependencyInjection": "1.0.0-beta4-11037",
+            "Microsoft.Framework.Logging": "1.0.0-beta4-11028",
+            "Microsoft.Framework.OptionsModel": "1.0.0-beta4-11012",
+            "Remotion.Linq": "2.0.0-alpha-002",
+            "System.Collections.Immutable": "1.1.33-beta"
+          },
+          "frameworkAssemblies": [
+            "System.Collections",
+            "System.Diagnostics.Debug",
+            "System.Diagnostics.Tools",
+            "System.Globalization",
+            "System.Linq",
+            "System.Linq.Expressions",
+            "System.Linq.Queryable",
+            "System.ObjectModel",
+            "System.Reflection",
+            "System.Reflection.Extensions",
+            "System.Resources.ResourceManager",
+            "System.Runtime",
+            "System.Runtime.Extensions",
+            "System.Runtime.InteropServices",
+            "System.Threading",
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/EntityFramework.Core.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/EntityFramework.Core.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Ix-Async": "1.2.3",
+            "Microsoft.Framework.Caching.Memory": "1.0.0-beta4-11012",
+            "Microsoft.Framework.DependencyInjection": "1.0.0-beta4-11037",
+            "Microsoft.Framework.Logging": "1.0.0-beta4-11028",
+            "Microsoft.Framework.OptionsModel": "1.0.0-beta4-11012",
+            "Remotion.Linq": "2.0.0-alpha-002",
+            "System.Collections.Immutable": "1.1.33-beta",
+            "System.Diagnostics.Contracts": "4.0.0-beta-22716",
+            "System.Linq.Queryable": "4.0.0-beta-22716",
+            "System.ObjectModel": "4.0.10-beta-22716",
+            "System.Reflection.Extensions": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/EntityFramework.Core.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/EntityFramework.Core.dll"
+          ]
+        }
+      },
+      "files": [
+        "EntityFramework.Core.7.0.0-beta4-12599.nupkg",
+        "EntityFramework.Core.7.0.0-beta4-12599.nupkg.sha512",
+        "EntityFramework.Core.nuspec",
+        "lib/dnx451/EntityFramework.Core.dll",
+        "lib/dnx451/EntityFramework.Core.xml",
+        "lib/dnxcore50/EntityFramework.Core.dll",
+        "lib/dnxcore50/EntityFramework.Core.xml",
+        "lib/net45/EntityFramework.Core.dll",
+        "lib/net45/EntityFramework.Core.xml"
+      ]
+    },
+    "EntityFramework.Relational/7.0.0-beta4-12599": {
+      "sha": "j0NOU+/HtmYQ0rCfx8Wxl0E5kZ9Hs0hMGxAwrKDFBQmIP/epMLCUHVE4YPg3yTYCcY76L9I9pjr250zOFh57jQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "EntityFramework.Core": "7.0.0-beta4-12599"
+          },
+          "frameworkAssemblies": [
+            "System.Data",
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/EntityFramework.Relational.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/EntityFramework.Relational.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "EntityFramework.Core": "7.0.0-beta4-12599",
+            "Microsoft.CSharp": "4.0.0-beta-22716",
+            "System.Data.Common": "4.0.0-beta-22716",
+            "System.Text.RegularExpressions": "4.0.10-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/EntityFramework.Relational.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/EntityFramework.Relational.dll"
+          ]
+        }
+      },
+      "files": [
+        "EntityFramework.Relational.7.0.0-beta4-12599.nupkg",
+        "EntityFramework.Relational.7.0.0-beta4-12599.nupkg.sha512",
+        "EntityFramework.Relational.nuspec",
+        "lib/dnx451/EntityFramework.Relational.dll",
+        "lib/dnx451/EntityFramework.Relational.xml",
+        "lib/dnxcore50/EntityFramework.Relational.dll",
+        "lib/dnxcore50/EntityFramework.Relational.xml",
+        "lib/net451/EntityFramework.Relational.dll",
+        "lib/net451/EntityFramework.Relational.xml"
+      ]
+    },
+    "EntityFramework.Relational.Design/7.0.0-beta4-12599": {
+      "sha": "HeihcRLLcH1/YbwNtJAo8HkLAfAvj2MDip//Jd5AjygFq/SOzTubDNfu9yHKiXOhWMm3KPs6wLapgc5TxIyCrQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "EntityFramework.Core": "7.0.0-beta4-12599",
+            "EntityFramework.Relational": "7.0.0-beta4-12599"
+          },
+          "frameworkAssemblies": [
+            "System.Data",
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/EntityFramework.Relational.Design.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/EntityFramework.Relational.Design.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "EntityFramework.Core": "7.0.0-beta4-12599",
+            "EntityFramework.Relational": "7.0.0-beta4-12599",
+            "Microsoft.CSharp": "4.0.0-beta-22716",
+            "System.Data.Common": "4.0.0-beta-22716",
+            "System.Data.SqlClient": "4.0.0-beta-22716",
+            "System.Reflection.Extensions": "4.0.0-beta-22716",
+            "System.Text.RegularExpressions": "4.0.10-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/EntityFramework.Relational.Design.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/EntityFramework.Relational.Design.dll"
+          ]
+        }
+      },
+      "files": [
+        "EntityFramework.Relational.Design.7.0.0-beta4-12599.nupkg",
+        "EntityFramework.Relational.Design.7.0.0-beta4-12599.nupkg.sha512",
+        "EntityFramework.Relational.Design.nuspec",
+        "lib/dnx451/EntityFramework.Relational.Design.dll",
+        "lib/dnx451/EntityFramework.Relational.Design.xml",
+        "lib/dnxcore50/EntityFramework.Relational.Design.dll",
+        "lib/dnxcore50/EntityFramework.Relational.Design.xml",
+        "lib/net451/EntityFramework.Relational.Design.dll",
+        "lib/net451/EntityFramework.Relational.Design.xml"
+      ]
+    },
+    "EntityFramework.SqlServer/7.0.0-beta4-12599": {
+      "sha": "3XOF8D7FWseZqUAvhfwF8rVuzza7mZg/n4gcznOQdxcyxal255jV7Q0ufhKjyvaNFzYWh2e1Bpkqs846D6mLcQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "EntityFramework.Relational": "7.0.0-beta4-12599"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/EntityFramework.SqlServer.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/EntityFramework.SqlServer.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "EntityFramework.Relational": "7.0.0-beta4-12599",
+            "System.Data.SqlClient": "4.0.0-beta-22716",
+            "System.Security.Principal.Windows": "4.0.0-beta-22716",
+            "System.Threading.Thread": "4.0.0-beta-22716",
+            "System.Text.Encoding.CodePages": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/EntityFramework.SqlServer.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/EntityFramework.SqlServer.dll"
+          ]
+        }
+      },
+      "files": [
+        "EntityFramework.SqlServer.7.0.0-beta4-12599.nupkg",
+        "EntityFramework.SqlServer.7.0.0-beta4-12599.nupkg.sha512",
+        "EntityFramework.SqlServer.nuspec",
+        "lib/dnx451/EntityFramework.SqlServer.dll",
+        "lib/dnx451/EntityFramework.SqlServer.xml",
+        "lib/dnxcore50/EntityFramework.SqlServer.dll",
+        "lib/dnxcore50/EntityFramework.SqlServer.xml",
+        "lib/net451/EntityFramework.SqlServer.dll",
+        "lib/net451/EntityFramework.SqlServer.xml"
+      ]
+    },
+    "EntityFramework.SqlServer.Design/7.0.0-beta4-12599": {
+      "sha": "dgfP0o/scc2r4Vovrn7JCL4qNEZu6FJLCfqhSJk+oEOl0PIpHnQsQk6CymL4wEY8BsGhivXY5qAGaOGjyGxpPQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "EntityFramework.Relational.Design": "7.0.0-beta4-12599",
+            "EntityFramework.SqlServer": "7.0.0-beta4-12599"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/EntityFramework.SqlServer.Design.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/EntityFramework.SqlServer.Design.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "EntityFramework.Relational.Design": "7.0.0-beta4-12599",
+            "EntityFramework.SqlServer": "7.0.0-beta4-12599",
+            "System.Data.SqlClient": "4.0.0-beta-22716",
+            "System.Runtime.Extensions": "4.0.10-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/EntityFramework.SqlServer.Design.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/EntityFramework.SqlServer.Design.dll"
+          ]
+        }
+      },
+      "files": [
+        "EntityFramework.SqlServer.Design.7.0.0-beta4-12599.nupkg",
+        "EntityFramework.SqlServer.Design.7.0.0-beta4-12599.nupkg.sha512",
+        "EntityFramework.SqlServer.Design.nuspec",
+        "lib/dnx451/EntityFramework.SqlServer.Design.dll",
+        "lib/dnx451/EntityFramework.SqlServer.Design.xml",
+        "lib/dnxcore50/EntityFramework.SqlServer.Design.dll",
+        "lib/dnxcore50/EntityFramework.SqlServer.Design.xml",
+        "lib/net451/EntityFramework.SqlServer.Design.dll",
+        "lib/net451/EntityFramework.SqlServer.Design.xml"
+      ]
+    },
+    "Ix-Async/1.2.3": {
+      "sha": "ytmPAD08eQL81pJRSjl13uN2cATHgOSGELx4uKnkFcI9fu9d+l2XlOdpXkqnJvFp/85svr65yatzDzNNIMD8Lg==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {},
+          "frameworkAssemblies": [
+            "System",
+            "System.Core"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Interactive.Async.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Interactive.Async.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {},
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.dll"
+          ],
+          "compileAssemblies": [
+            "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.dll"
+          ]
+        }
+      },
+      "files": [
+        "Ix-Async.1.2.3.nupkg",
+        "Ix-Async.1.2.3.nupkg.sha512",
+        "Ix-Async.nuspec",
+        "lib/net40/System.Interactive.Async.dll",
+        "lib/net40/System.Interactive.Async.XML",
+        "lib/net45/System.Interactive.Async.dll",
+        "lib/net45/System.Interactive.Async.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.XML"
+      ]
+    },
     "Microsoft.AspNet.Authentication/1.0.0-beta4-11920": {
       "sha": "sCvD5LPhAhLJynE7zjSlU+WB9vxHq/78NcBqXn/eBp4nruN/Me8r2lI2zZcaLXY/iaA8S6hlHkEUY7DVP3/Hww==",
       "frameworks": {
@@ -1862,6 +2243,53 @@
         "lib/portable-net451+win81+wpa81/Microsoft.Framework.ConfigurationModel.Interfaces.xml"
       ]
     },
+    "Microsoft.Framework.ConfigurationModel.Json/1.0.0-beta4-11001": {
+      "sha": "V5rmWhIffP3AGguMkMmsrdsVpXLOqWvzPYyk5n/N7zGC+Wf6xL0LXQdEcEvciZXFKMRGGedQq82IVOBr+SjAtQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Newtonsoft.Json": "6.0.6",
+            "Microsoft.Framework.ConfigurationModel": "1.0.0-beta4-11001"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Newtonsoft.Json": "6.0.6",
+            "Microsoft.Framework.ConfigurationModel": "1.0.0-beta4-11001"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Json.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Json.dll"
+          ]
+        }
+      },
+      "files": [
+        "Microsoft.Framework.ConfigurationModel.Json.1.0.0-beta4-11001.nupkg",
+        "Microsoft.Framework.ConfigurationModel.Json.1.0.0-beta4-11001.nupkg.sha512",
+        "Microsoft.Framework.ConfigurationModel.Json.nuspec",
+        "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.dll",
+        "lib/dnx451/Microsoft.Framework.ConfigurationModel.Json.xml",
+        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Json.dll",
+        "lib/dnxcore50/Microsoft.Framework.ConfigurationModel.Json.xml",
+        "lib/net45/Microsoft.Framework.ConfigurationModel.Json.dll",
+        "lib/net45/Microsoft.Framework.ConfigurationModel.Json.xml"
+      ]
+    },
     "Microsoft.Framework.DependencyInjection/1.0.0-beta4-11037": {
       "sha": "21nvkPER5JNcLjQ2GYSDSklJDaCyrfTWmt/Mayyy4MPlW6OzkS3WqDxVFJIDNKkcs9bp1leruOzvGXVNffnxkQ==",
       "frameworks": {
@@ -2536,6 +2964,38 @@
         "tools/install.ps1"
       ]
     },
+    "Remotion.Linq/2.0.0-alpha-002": {
+      "sha": "7vNxTm6wl76ck2VcfWM4eVOL61zwFSUtm4uniJ0S/YPea53e7V1b8tdGZMivhRo6lCvLhK9FQ32yU59zHMBhXg==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {},
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll"
+          ],
+          "compileAssemblies": [
+            "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {},
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll"
+          ],
+          "compileAssemblies": [
+            "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll"
+          ]
+        }
+      },
+      "files": [
+        "Remotion.Linq.2.0.0-alpha-002.nupkg",
+        "Remotion.Linq.2.0.0-alpha-002.nupkg.sha512",
+        "Remotion.Linq.nuspec",
+        "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll",
+        "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml"
+      ]
+    },
     "System.Collections/4.0.10-beta-22716": {
       "sha": "WVM63HLcHwjqfUqXDPJ6V4qRQh4hFjHdhG/oQ7tABYVO8R4qnisb+rx0zqVTk4jtZRv2gLj+ttTOia4KS5uv7A==",
       "frameworks": {
@@ -2854,6 +3314,100 @@
         "lib/contract/System.Console.dll",
         "lib/net45/System.Console.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Console.dll"
+      ]
+    },
+    "System.Data.Common/4.0.0-beta-22716": {
+      "sha": "AzWtac/bD+tUX4k1N/f77LUA5bqbMM5TVqAx1MDQ5GbwhKoQuVA3x6iLNdv90x3qbUC86wjUzNIEPHBSTmTVHg==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.0-beta-22716",
+            "System.Runtime": "4.0.0-beta-22716",
+            "System.Threading.Tasks": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/net45/System.Data.Common.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Data.Common.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.0-beta-22716",
+            "System.Runtime": "4.0.0-beta-22716",
+            "System.Threading.Tasks": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Data.Common.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Data.Common.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Data.Common.4.0.0-beta-22716.nupkg",
+        "System.Data.Common.4.0.0-beta-22716.nupkg.sha512",
+        "System.Data.Common.nuspec",
+        "lib/aspnetcore50/System.Data.Common.dll",
+        "lib/contract/System.Data.Common.dll",
+        "lib/net45/System.Data.Common.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Data.Common.dll"
+      ]
+    },
+    "System.Data.SqlClient/4.0.0-beta-22716": {
+      "sha": "6nDSZ26sa68UsD91ozzGSGvKFkjcwyxogS2DoWjz6Ta4rJlmQJlSzQ2WkPfyxI27lMx7dvIJl+PNriAzxtO9jQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Data.Common": "4.0.0-beta-22716",
+            "System.Globalization": "4.0.0-beta-22716",
+            "System.IO": "4.0.0-beta-22716",
+            "System.Runtime": "4.0.0-beta-22716",
+            "System.Threading.Tasks": "4.0.0-beta-22716",
+            "System.Xml.ReaderWriter": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/net45/System.Data.SqlClient.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Data.SqlClient.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Data.Common": "4.0.0-beta-22716",
+            "System.Globalization": "4.0.0-beta-22716",
+            "System.IO": "4.0.0-beta-22716",
+            "System.Runtime": "4.0.0-beta-22716",
+            "System.Threading.Tasks": "4.0.0-beta-22716",
+            "System.Xml.ReaderWriter": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Data.SqlClient.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Data.SqlClient.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Data.SqlClient.4.0.0-beta-22716.nupkg",
+        "System.Data.SqlClient.4.0.0-beta-22716.nupkg.sha512",
+        "System.Data.SqlClient.nuspec",
+        "lib/aspnetcore50/System.Data.SqlClient.dll",
+        "lib/contract/System.Data.SqlClient.dll",
+        "lib/net45/System.Data.SqlClient.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Data.SqlClient.dll",
+        "native/win7/x64/sni.dll",
+        "native/win7/x86/sni.dll"
       ]
     },
     "System.Diagnostics.Contracts/4.0.0-beta-22716": {
@@ -3432,6 +3986,49 @@
         "lib/contract/System.Linq.Expressions.dll",
         "lib/net45/System.Linq.Expressions.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Linq.Expressions.dll"
+      ]
+    },
+    "System.Linq.Queryable/4.0.0-beta-22716": {
+      "sha": "2x6FZIXn+lIE0rXVXznvv0kq/QZJDJsl63ymsTPo+679RmBKqTGI4g2HYFiiB198gmH2tyPdj/HsuMNR7Uwnqw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Linq": "4.0.0-beta-22716",
+            "System.Linq.Expressions": "4.0.0-beta-22716",
+            "System.Runtime": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/net45/System.Linq.Queryable.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Linq.Queryable.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Linq": "4.0.0-beta-22716",
+            "System.Linq.Expressions": "4.0.0-beta-22716",
+            "System.Runtime": "4.0.0-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Linq.Queryable.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Linq.Queryable.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Linq.Queryable.4.0.0-beta-22716.nupkg",
+        "System.Linq.Queryable.4.0.0-beta-22716.nupkg.sha512",
+        "System.Linq.Queryable.nuspec",
+        "lib/aspnetcore50/System.Linq.Queryable.dll",
+        "lib/contract/System.Linq.Queryable.dll",
+        "lib/net45/System.Linq.Queryable.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Linq.Queryable.dll"
       ]
     },
     "System.Net.NetworkInformation/4.0.10-beta-22716": {
@@ -4482,6 +5079,43 @@
         "lib/contract/System.Text.Encoding.dll",
         "lib/net45/System.Text.Encoding.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Text.Encoding.dll"
+      ]
+    },
+    "System.Text.Encoding.CodePages/4.0.0-beta-22716": {
+      "sha": "v/kfbdNEQfWhiKs3njdGfevheyXYg1FCozojSikPiDGKztS94OOB2/rPervPqNuydOoGZwO1GjqUB0Fpnuxehw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22716",
+            "System.Text.Encoding": "4.0.10-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [],
+          "compileAssemblies": []
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.0-beta-22716",
+            "System.Text.Encoding": "4.0.10-beta-22716"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Text.Encoding.CodePages.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Text.Encoding.CodePages.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Text.Encoding.CodePages.4.0.0-beta-22716.nupkg",
+        "System.Text.Encoding.CodePages.4.0.0-beta-22716.nupkg.sha512",
+        "System.Text.Encoding.CodePages.nuspec",
+        "lib/aspnetcore50/System.Text.Encoding.CodePages.dll",
+        "lib/contract/System.Text.Encoding.CodePages.dll",
+        "lib/net45/_._",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Text.Encoding.CodePages.dll"
       ]
     },
     "System.Text.Encoding.Extensions/4.0.10-beta-22716": {

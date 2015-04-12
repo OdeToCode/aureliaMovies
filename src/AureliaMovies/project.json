@@ -5,11 +5,17 @@
         "Microsoft.AspNet.Loader.IIS": "1.0.0-beta4-11316",
         "Microsoft.AspNet.Loader.IIS.Interop": "1.0.0-beta4-11316",
         "Microsoft.AspNet.Mvc": "6.0.0-beta4-13141",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-beta4-11540"
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta4-11540",
+        "EntityFramework.SqlServer": "7.0.0-beta4-12599",
+        "EntityFramework.Commands": "7.0.0-beta4-12599",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4-11001"
     },
     "frameworks": {
         "dnx451": { },
         "dnxcore50": { }
+    },
+    "commands": {
+        "ef": "EntityFramework.Commands"
     },
     "bundleExclude": [
         "node_modules",
