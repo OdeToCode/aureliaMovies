@@ -1,41 +1,74 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNet.Mvc;
+using AureliaMovies.Data;
+using AureliaMovies.Model;
+using System.Linq;
+using Microsoft.Data.Entity;
 
 namespace AureliaMovies.Api.Controllers
 {
     [Route("api/[controller]")]
     public class MoviesController : Controller
     {
-        // GET: api/values
+        MoviesData _db;
+
+        public MoviesController(MoviesData db)
+        {
+            _db = db;
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Movie> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _db.Movies;
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var movie = _db.Movies.FirstOrDefault(m => m.Id == id);
+            if(movie == null)
+            {
+                return HttpNotFound();
+            }
+            return new ObjectResult(movie);
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
-        {
+        public IActionResult Post(Movie newMovie)
+        {            
+            if(ModelState.IsValid)
+            {
+                _db.Movies.Add(newMovie);
+                _db.SaveChanges();
+                return CreatedAtRoute(new { controller = "Movies", id = newMovie.Id }, newMovie);
+            }
+            return HttpBadRequest(ModelState);
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put(Movie updatedMovie)
         {
+            if (ModelState.IsValid)
+            {
+                _db.Movies.Attach(updatedMovie).State = EntityState.Modified;
+                _db.SaveChanges();
+                return new ObjectResult(updatedMovie);
+            }
+            return HttpBadRequest(ModelState);
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var movie = _db.Movies.FirstOrDefault(m => m.Id == id);
+            if(movie != null)
+            {
+                _db.Movies.Remove(movie);
+                _db.SaveChanges();
+                return new ObjectResult(movie);
+            }
+            return HttpNotFound();
         }
     }
 }
