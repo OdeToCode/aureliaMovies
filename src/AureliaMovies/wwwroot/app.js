@@ -11,8 +11,11 @@ export class App {
 
     activate() {
         this.message = "Hello, World!";
-        this.http.get("/api/movies")
-                 .then(reposnse => this.movies = JSON.parse(reponse.data));
+        return this.http.get("/api/movies")
+                        .then(message => {                         
+                            this.movies = JSON.parse(message.response);
+                            return this.movies;
+                        });
     }
 
     changeMessage() {
