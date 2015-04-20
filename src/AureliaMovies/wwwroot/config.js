@@ -20,7 +20,7 @@ System.config({
     "babel": "npm:babel@4.7.16",
     "babel-runtime": "npm:babel-runtime@4.7.16",
     "bootstrap": "github:twbs/bootstrap@3.3.4",
-    "github:aurelia/binding@0.4.0": {
+    "github:aurelia/binding@0.4.1": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.1",
       "aurelia-metadata": "github:aurelia/metadata@0.3.4",
       "aurelia-task-queue": "github:aurelia/task-queue@0.2.5"
@@ -44,7 +44,7 @@ System.config({
       "core-js": "npm:core-js@0.4.10"
     },
     "github:aurelia/framework@0.9.0": {
-      "aurelia-binding": "github:aurelia/binding@0.4.0",
+      "aurelia-binding": "github:aurelia/binding@0.4.1",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.1",
       "aurelia-loader": "github:aurelia/loader@0.4.0",
       "aurelia-logging": "github:aurelia/logging@0.2.7",
@@ -76,12 +76,12 @@ System.config({
       "core-js": "npm:core-js@0.4.10"
     },
     "github:aurelia/templating-binding@0.9.0": {
-      "aurelia-binding": "github:aurelia/binding@0.4.0",
+      "aurelia-binding": "github:aurelia/binding@0.4.1",
       "aurelia-logging": "github:aurelia/logging@0.2.7",
       "aurelia-templating": "github:aurelia/templating@0.9.0"
     },
     "github:aurelia/templating-resources@0.9.2": {
-      "aurelia-binding": "github:aurelia/binding@0.4.0",
+      "aurelia-binding": "github:aurelia/binding@0.4.1",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.1",
       "aurelia-logging": "github:aurelia/logging@0.2.7",
       "aurelia-templating": "github:aurelia/templating@0.9.0",
@@ -95,7 +95,7 @@ System.config({
       "aurelia-templating": "github:aurelia/templating@0.9.0"
     },
     "github:aurelia/templating@0.9.0": {
-      "aurelia-binding": "github:aurelia/binding@0.4.0",
+      "aurelia-binding": "github:aurelia/binding@0.4.1",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.5.1",
       "aurelia-html-template-element": "github:aurelia/html-template-element@0.1.3",
       "aurelia-loader": "github:aurelia/loader@0.4.0",
@@ -107,6 +107,9 @@ System.config({
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
+    },
+    "github:twbs/bootstrap@3.3.4": {
+      "jquery": "github:components/jquery@2.1.3"
     },
     "npm:babel-runtime@4.7.16": {
       "process": "github:jspm/nodelibs-process@0.1.1"
