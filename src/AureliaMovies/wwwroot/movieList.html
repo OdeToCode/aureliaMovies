@@ -1,0 +1,12 @@
+﻿<template>
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+        <tr repeat.for="movie of movies">
+            <td>${movie.Title}</td>
+            <td>${movie.ReleaseYear}</td>
+        </tr>
+    </table>
+</template>

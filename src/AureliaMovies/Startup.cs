@@ -16,7 +16,7 @@ namespace AureliaMovies
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc();            
             services.AddEntityFramework(Configuration)
                     .AddSqlServer()
                     .AddDbContext<MoviesData>();
@@ -24,9 +24,9 @@ namespace AureliaMovies
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseMvc(rb =>
+            app.UseMvc(routes =>
             {
-                rb.MapRoute("Default", "{controller=Home}/{action=Index}");
+                routes.MapRoute("Default", "{controller=Home}/{action=Index}");
             });
 
             var seeder = new DatabaseSeed(new MoviesData(Configuration));
@@ -34,3 +34,10 @@ namespace AureliaMovies
         }
     }
 }
+
+
+// intro
+// views and view models
+// startup, config, routing
+// templating
+// finale

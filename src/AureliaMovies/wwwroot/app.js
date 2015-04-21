@@ -1,25 +1,20 @@
-﻿import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-http-client';
+﻿import {inject} from "aurelia-framework";
+import {Router} from "aurelia-router";
 
-@inject(HttpClient)
+@inject(Router)
 export class App {
-    
-    constructor(http) {
-        this.http = http;
-        this.message = "";
-    }
 
-    activate() {
-        this.message = "Hello, World!";
-        return this.http.get("/api/movies")
-                        .then(message => {                         
-                            this.movies = JSON.parse(message.response);
-                            return this.movies;
-                        });
-    }
-
-    changeMessage() {
-        this.message = "Goodbye!";
+    constructor(router) {
+        this.router = router;
+        this.router.configure(r => {
+            r.title = "At The Movies";
+            r.map([
+                { route: "", moduleId: "movieList", title: "All Movies", nav:true},
+                { route: "about", moduleId: "about", title: "About", nav:true }
+            ]);
+            console.log(r);
+        });
+        console.log(router);
     }
 
 }
