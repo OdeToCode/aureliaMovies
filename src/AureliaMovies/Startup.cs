@@ -17,7 +17,7 @@ namespace AureliaMovies
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();            
-            services.AddEntityFramework(Configuration)
+            services.AddEntityFramework()
                     .AddSqlServer()
                     .AddDbContext<MoviesData>();
         }

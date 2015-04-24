@@ -2,13 +2,13 @@
     "webroot": "wwwroot",
     "version": "1.0.0-*",
     "dependencies": {
-        "Microsoft.AspNet.Loader.IIS": "1.0.0-beta4-11316",
-        "Microsoft.AspNet.Loader.IIS.Interop": "1.0.0-beta4-11316",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta4-13141",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-beta4-11540",
-        "EntityFramework.SqlServer": "7.0.0-beta4-12599",
-        "EntityFramework.Commands": "7.0.0-beta4-12599",
-        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4-11001"
+        "Microsoft.AspNet.Loader.IIS": "1.0.0-beta4",
+        "Microsoft.AspNet.Loader.IIS.Interop": "1.0.0-beta4",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta4",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta4",
+        "EntityFramework.SqlServer": "7.0.0-beta4",
+        "EntityFramework.Commands": "7.0.0-beta4",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4"
     },
     "frameworks": {
         "dnx451": { },
@@ -17,7 +17,7 @@
     "commands": {
         "ef": "EntityFramework.Commands"
     },
-    "bundleExclude": [
+    "publishExclude": [
         "node_modules",
         "bower_components",
         "**.xproj",
