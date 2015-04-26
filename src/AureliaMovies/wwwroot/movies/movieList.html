@@ -3,10 +3,14 @@
         <tr>
             <th>Title</th>
             <th>Year</th>
+            <th></th>
         </tr>
         <tr repeat.for="movie of movies">
             <td>${movie.Title}</td>
             <td>${movie.ReleaseYear}</td>
+            <td>
+                <button class="btn btn-default">Details</button>
+            </td>
         </tr>
     </table>
 </template>
