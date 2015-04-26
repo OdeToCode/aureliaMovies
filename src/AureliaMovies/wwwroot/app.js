@@ -9,8 +9,9 @@ export class App {
         this.router.configure(r => {
             r.title = "At The Movies";
             r.map([
-                { route: "", moduleId: "movies/movieList", title: "All Movies", nav:true},
-                { route: "about", moduleId: "about/about", title: "About", nav:true }
+                { route: "", moduleId: "movies/movieList", nav:true},
+                { route: "about", moduleId: "about/about", nav:true },
+                { route: "details/:id", moduleId: "movies/details" }
             ]);
             console.log(r);
         });

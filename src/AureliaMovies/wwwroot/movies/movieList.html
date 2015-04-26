@@ -9,7 +9,7 @@
             <td>${movie.Title}</td>
             <td>${movie.ReleaseYear}</td>
             <td>
-                <button class="btn btn-default">Details</button>
+                <a route-href="route: details; params.bind: {id:movie.Id}" class="btn btn-default">Details</a>
             </td>
         </tr>
     </table>
