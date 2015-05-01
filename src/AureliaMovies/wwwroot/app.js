@@ -1,19 +1,14 @@
-﻿import {inject} from "aurelia-framework";
-import {Router} from "aurelia-router";
+﻿export class App {
 
-@inject(Router)
-export class App {
-
-    constructor(router) {
+    configureRouter(config, router) {
         this.router = router;
-        this.router.configure(r => {
-            r.title = "At The Movies";
-            r.map([
-                { route: "", moduleId: "movies/movieList", nav:true},
-                { route: "about", moduleId: "about/about", nav:true },
-                { route: "details/:id", moduleId: "movies/details" },
-                { route: "edit/?id", moduleId: "movies/edit" }
-            ]);
-        });
+        
+        config.title = "At The Movies";
+        config.map([
+            { route: "", moduleId: "movies/movieList", nav:true},
+            { route: "about", moduleId: "about/about", nav:true },
+            { route: "details/:id", moduleId: "movies/details" },
+            { route: "edit/?id", moduleId: "movies/edit" }
+        ]);
     }
 }
