@@ -1,6 +1,8 @@
 ﻿import {inject} from "aurelia-framework";
 import {HttpClient} from "aurelia-http-client";
 
+let parse = message => JSON.parse(message.response);
+
 @inject(HttpClient)
 export class MovieData {
     
@@ -8,11 +10,13 @@ export class MovieData {
         this.http = httpClient;
     }
 
+    getById(id) {
+        return this.http.get(`/api/movies/${id}`)
+                        .then(parse);
+    }
+
     getAll() {
         return this.http.get("/api/movies")
-                        .then(message => {                         
-                            this.movies = JSON.parse(message.response);
-                            return this.movies;
-                        });
+                        .then(parse);
     }
 }

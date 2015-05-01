@@ -1,5 +1,5 @@
 ﻿import {inject} from 'aurelia-framework';
-import {MovieData} from './movieData.js';
+import {MovieData} from './movieData';
 
 @inject(MovieData)
 export class Details {
@@ -8,8 +8,8 @@ export class Details {
         this.data = movieData;
     }
 
-    activate() {
-        return this.data.getById().then(movie => this.movie = movie);
+    activate(params) {
+        return this.data.getById(params.id).then(movie => this.movie = movie);
     }
 
 }
