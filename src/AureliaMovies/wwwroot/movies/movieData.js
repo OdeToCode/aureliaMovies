@@ -1,4 +1,4 @@
-﻿import {Inject} from "aurelia-framework";
+﻿import {inject} from "aurelia-framework";
 import {HttpClient} from "aurelia-http-client";
 
 @inject(HttpClient)

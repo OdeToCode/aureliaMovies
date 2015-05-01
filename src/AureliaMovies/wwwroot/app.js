@@ -11,11 +11,9 @@ export class App {
             r.map([
                 { route: "", moduleId: "movies/movieList", nav:true},
                 { route: "about", moduleId: "about/about", nav:true },
-                { route: "details/:id", moduleId: "movies/details" }
+                { route: "details/:id", moduleId: "movies/details" },
+                { route: "edit/?id", moduleId: "movies/edit" }
             ]);
-            console.log(r);
         });
-        console.log(router);
     }
-
 }

@@ -1,19 +1,15 @@
 ﻿import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-http-client';
+import {MovieData} from './movieData';
 
-@inject(HttpClient)
+@inject(MovieData)
 export class MovieList {
     
-    constructor(http) {
-        this.http = http;
+    constructor(movieData) {
+        this.data = movieData;
     }
 
     activate() {
-        return this.http.get("/api/movies")
-                        .then(message => {                         
-                            this.movies = JSON.parse(message.response);
-                            return this.movies;
-                        });
+        return this.data.getAll()
+                        .then(movies => this.movies = movies);
     }
-
 }
