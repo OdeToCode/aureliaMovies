@@ -5,7 +5,7 @@
         
         config.title = "At The Movies";
         config.map([
-            { route: "", name: 'home', moduleId: "movies/movieList", title:"List", nav:true},
+            { route: "", name: 'home', moduleId: "movies/list", title:"List", nav:true},
             { route: "about", moduleId: "about/about", title: "About", nav:true },
             { route: "details/:id", moduleId: "movies/details" },
             { route: "edit/:id", moduleId: "movies/edit" },

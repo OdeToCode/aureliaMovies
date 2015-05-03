@@ -2,7 +2,7 @@
 import {MovieData} from './movieData';
 
 @inject(MovieData)
-export class MovieList {
+export class List {
     
     constructor(movieData) {
         this.data = movieData;
