@@ -35,7 +35,7 @@ namespace AureliaMovies.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Movie newMovie)
+        public IActionResult Post([FromBody] Movie newMovie)
         {            
             if(ModelState.IsValid)
             {
@@ -46,8 +46,8 @@ namespace AureliaMovies.Api.Controllers
             return HttpBadRequest(ModelState);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put(Movie updatedMovie)
+        [HttpPut]
+        public IActionResult Put([FromBody] Movie updatedMovie)
         {
             if (ModelState.IsValid)
             {
