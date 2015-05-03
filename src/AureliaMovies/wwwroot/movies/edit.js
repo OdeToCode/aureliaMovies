@@ -35,7 +35,8 @@ export class Edit {
         this.validation.validate().then(() => {
             return this.data.save(this.movie);
         }).then(movie => {
-            let url = router.generate("details", { id: movie.Id});
+            console.log(movie);
+            let url = this.router.generate("details", { id: movie.Id});
             this.router.navigate(url);
         });
     }

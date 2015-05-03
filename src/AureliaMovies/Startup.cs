@@ -24,6 +24,7 @@ namespace AureliaMovies
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseErrorPage();
             app.UseMvc(routes =>
             {
                 routes.MapRoute("Default", "{controller=Home}/{action=Index}");
