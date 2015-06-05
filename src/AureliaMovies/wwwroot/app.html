@@ -6,15 +6,17 @@
                 <a class="navbar-brand" href="#/">${router.title}</a>
             </div>
             <ul class="nav navbar-nav">
-                <li repeat.for="row of router.navigation" 
+                <li repeat.for="row of router.navigation"
                     class="${row.isActive ? 'active' : ''}">
                     <a href.bind="row.href">${row.title}</a>
                 </li>
             </ul>
         </div>
     </nav>
-
     <div class="container">
+        <div class="fa fa-spinner fa-spin" show.bind="router.isNavigating">
+            <i class="fa fa-spinner fa-spin"></i>
+        </div>
         <router-view></router-view>
     </div>
 
