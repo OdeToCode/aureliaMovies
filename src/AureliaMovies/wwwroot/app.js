@@ -3,7 +3,7 @@
     configureRouter(config, router) {
         this.router = router;
         
-        config.title = "At The Movies";
+        config.title = "Movies";
         config.map([
             { route: "", name: 'home', moduleId: "movies/list", title:"List", nav:true},
             { route: "about", moduleId: "about/about", title: "About", nav:true },
