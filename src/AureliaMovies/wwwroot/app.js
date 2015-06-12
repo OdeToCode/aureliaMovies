@@ -7,9 +7,9 @@
         config.map([
             { route: "", name: 'home', moduleId: "movies/list", title:"List", nav:true},
             { route: "about", moduleId: "about/about", title: "About", nav:true },
-            { route: "details/:id", moduleId: "movies/details" },
-            { route: "edit/:id", moduleId: "movies/edit" },
-            { route: "create", moduleId:"movies/edit" }
+            { route: "details/:id", name:"details", moduleId: "movies/details" },
+            { route: "edit/:id", name:"edit", moduleId: "movies/edit" },
+            { route: "create", name:"create", moduleId:"movies/edit" }
         ]);
     }
 }
