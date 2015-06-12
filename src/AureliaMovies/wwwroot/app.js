@@ -1,8 +1,8 @@
 ﻿export class App {
 
     configureRouter(config, router) {
-        this.router = router;
-        
+        this.router = router; 
+ 
         config.title = "Movies";
         config.map([
             { route: "", name: 'home', moduleId: "movies/list", title:"List", nav:true},
