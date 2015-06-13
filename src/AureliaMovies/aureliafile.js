@@ -17,7 +17,7 @@ aurelia.command("bundle", {
     },
     template: {
         "wwwroot/appbundle": {
-            pattern: "./wwwroot/**/*.html",
+            pattern: "ignorefornow",
             options: {
                 inject: true,
             }
