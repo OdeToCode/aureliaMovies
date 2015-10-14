@@ -1,5 +1,6 @@
 ﻿using AureliaMovies.Data;
 using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.StaticFiles;
 using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
@@ -29,6 +30,8 @@ namespace AureliaMovies
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseErrorPage();
             app.UseMvc(routes =>
             {
@@ -40,10 +43,3 @@ namespace AureliaMovies
         }
     }
 }
-
-
-// intro
-// views and view models
-// startup, config, routing
-// templating
-// finale

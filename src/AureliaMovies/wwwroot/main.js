@@ -3,7 +3,7 @@
            .standardConfiguration()
            .developmentLogging()
            .plugin("aurelia-validation")
-           .plugin("./resources/index");
+           .feature("./resources");
 
     aurelia.start().then(a => a.setRoot("app", document.body));
 };
