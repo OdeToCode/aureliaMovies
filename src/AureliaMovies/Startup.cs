@@ -1,15 +1,20 @@
 ﻿using AureliaMovies.Data;
 using Microsoft.AspNet.Builder;
-using Microsoft.Framework.ConfigurationModel;
+using Microsoft.Dnx.Runtime;
+using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
+
 
 namespace AureliaMovies
 {
     public class Startup
     {
-        public Startup()
+        public Startup(IApplicationEnvironment applicationEnvironment)
         {
-            Configuration = new Configuration().AddJsonFile("config.json");
+            Configuration = 
+                new ConfigurationBuilder(applicationEnvironment.ApplicationBasePath)
+                    .AddJsonFile("config.json")
+                    .Build();
         }
 
         public IConfiguration Configuration { get; set; }

@@ -1,6 +1,6 @@
 ﻿using AureliaMovies.Model;
 using Microsoft.Data.Entity;
-using Microsoft.Framework.ConfigurationModel;
+using Microsoft.Framework.Configuration;
 
 namespace AureliaMovies.Data
 {
@@ -23,7 +23,7 @@ namespace AureliaMovies.Data
             var connectionString = "Server=(localdb)\\mssqllocaldb; Database = movies; integrated security = True";
             if (_configuration != null)
             {
-                connectionString = _configuration.Get("EntityFramework:MoviesData:ConnectionString");
+                connectionString = _configuration["EntityFramework:MoviesData:ConnectionString"];
             }
             optionsBuilder.UseSqlServer(connectionString);
             base.OnConfiguring(optionsBuilder);
