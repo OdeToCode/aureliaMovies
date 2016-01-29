@@ -1,16 +1,11 @@
 ﻿using AureliaMovies.Model;
 using Microsoft.Data.Entity;
-using Microsoft.Framework.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace AureliaMovies.Data
 {
     public class MoviesData : DbContext
     {
-        public MoviesData()
-        {
-
-        }
-
         public MoviesData(IConfiguration configuration)
         {
             _configuration = configuration;

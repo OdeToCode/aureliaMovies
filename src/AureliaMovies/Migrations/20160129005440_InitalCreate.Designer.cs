@@ -4,23 +4,18 @@ using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
 using AureliaMovies.Data;
-using Microsoft.Data.Entity.SqlServer.Metadata;
 
 namespace AureliaMovies.Migrations
 {
     [DbContext(typeof(MoviesData))]
-    partial class InitialCreate
+    [Migration("20160129005440_InitalCreate")]
+    partial class InitalCreate
     {
-        public override string Id
-        {
-            get { return "20151014135023_InitialCreate"; }
-        }
-
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .Annotation("ProductVersion", "7.0.0-beta7-15540")
-                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerIdentityStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("AureliaMovies.Model.Movie", b =>
                 {
@@ -31,7 +26,7 @@ namespace AureliaMovies.Migrations
 
                     b.Property<string>("Title");
 
-                    b.Key("Id");
+                    b.HasKey("Id");
                 });
         }
     }

@@ -14,7 +14,7 @@ namespace AureliaMovies.Data
 
         public void Seed()
         {
-            if (_db.Movies.Count() == 0)
+            if (!_db.Movies.Any())
             {
                 _db.Movies.AddRange(
                     new Movie { Title="Star Wars", ReleaseYear=1983},

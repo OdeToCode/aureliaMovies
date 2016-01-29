@@ -1,10 +1,8 @@
 ﻿using AureliaMovies.Data;
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.StaticFiles;
-using Microsoft.Dnx.Runtime;
-using Microsoft.Framework.Configuration;
-using Microsoft.Framework.DependencyInjection;
-
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace AureliaMovies
 {
@@ -13,7 +11,7 @@ namespace AureliaMovies
         public Startup(IApplicationEnvironment applicationEnvironment)
         {
             Configuration = 
-                new ConfigurationBuilder(applicationEnvironment.ApplicationBasePath)
+                new ConfigurationBuilder()
                     .AddJsonFile("config.json")
                     .Build();
         }
@@ -22,6 +20,7 @@ namespace AureliaMovies
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(p => Configuration);
             services.AddMvc();            
             services.AddEntityFramework()
                     .AddSqlServer()
@@ -30,9 +29,8 @@ namespace AureliaMovies
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-            app.UseErrorPage();
+            app.UseFileServer();
+            app.UseDeveloperExceptionPage();
             app.UseMvc(routes =>
             {
                 routes.MapRoute("Default", "{controller=Home}/{action=Index}");
