@@ -8,7 +8,10 @@
             <ul class="nav navbar-nav">
                 <li repeat.for="row of router.navigation"
                     class="${row.isActive ? 'active' : ''}">
-                    <a href.bind="row.href">${row.title}<i if.bind="row.settings.icon" class="fa fa-${row.settings.icon}"></i></a>                                       
+                    <a href.bind="row.href">
+                        ${row.title}
+                        <i if.bind="row.settings.icon" class="fa fa-${row.settings.icon}"></i>
+                    </a>
                 </li>
             </ul>
         </div>
